@@ -7,3 +7,6 @@ This is a repo for an open AI challenge held by Arkangel AI. The problems stands
 > As a deliverable, a live demo of the deployed model must be made, as well as a short presentation of the different implemented architectures explaining the reason for the model selection. It is a very important client that has a time constraint, for this reason there is a period of X days to carry out this project until a first functional prototype with its respective deliverable.
 
 To submit your solution, please generate a PR to this repository by generating a new folder with the name and date of the proposed solution.
+
+
+[Descargar model.h5 desde Google Drive](https://drive.google.com/file/d/1jwI2NbRMWyN-Pl3j0zjYvJTDWsOkX-4v/view?usp=sharing)
