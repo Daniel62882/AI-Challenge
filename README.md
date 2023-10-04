@@ -8,5 +8,8 @@ This is a repo for an open AI challenge held by Arkangel AI. The problems stands
 
 To submit your solution, please generate a PR to this repository by generating a new folder with the name and date of the proposed solution.
 
+# EJECUCION PREOYECTO DANIEL MONTOTA:
+
+Debido a que el tamaño de mi archivo model.h5 supera el limite por git hub, que es mi archivo de entrenamiento del modelo, lo dejo con un enlace para descargar y es necesario agregarlo a la carpeta del proyecto, para su correcto funcionamiento.
 
 [Descargar model.h5 desde Google Drive](https://drive.google.com/file/d/1jwI2NbRMWyN-Pl3j0zjYvJTDWsOkX-4v/view?usp=sharing)
