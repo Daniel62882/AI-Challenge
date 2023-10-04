@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detector de Emociones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            text-align: center;
+            margin: 20px;
+        }
+
+        input[type="file"] {
+            margin: 10px;
+        }
+
+        /* Estilos para los botones */
+        .button-container {
+            text-align: center;
+        }
+
+        .button-container button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 15px 30px; /* Aumenta el tamaño del botón */
+            margin: 10px;
+            cursor: pointer;
+            font-size: 18px; /* Aumenta el tamaño del texto */
+            border-radius: 5px; /* Agrega bordes redondeados */
+            transition: background-color 0.3s, transform 0.3s; /* Agrega transiciones */
+        }
+
+        .button-container button:hover {
+            background-color: #0056b3; /* Cambia el color al pasar el mouse */
+            transform: scale(1.05); /* Escala el botón al pasar el mouse */
+        }
+
+        h2 {
+            text-align: center;
+            color: #007bff;
+            font-size: 24px; /* Aumenta el tamaño del texto */
+        }
+
+        /* Estilos para la animación de la emoción predicha */
+        .predicted-emotion {
+            opacity: 0; /* Inicialmente invisible */
+            font-size: 28px; /* Tamaño del texto grande */
+            transition: opacity 0.5s; /* Agrega una transición de opacidad */
+        }
+
+        /* Estilos para el botón de reinicio */
+        #reset-button {
+            display: block;
+            margin: 0 auto;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        #reset-button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Detector de Emociones</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".jpg, .jpeg, .png">
+        <div class="button-container">
+            <button type="submit">Cargar y Predecir</button>
+        </div>
+    </form>
+
+    {% if predicted_emotion %}
+    <h2 class="predicted-emotion">Emoción Predicha: {{ predicted_emotion }}</h2>
+    {% endif %}
+
+    <button id="reset-button">Reiniciar</button>
+
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <script>
+        // Función para mostrar la emoción predicha con una animación
+        const predictedEmotion = document.querySelector('.predicted-emotion');
+        if (predictedEmotion) {
+            predictedEmotion.style.opacity = '1';
+        }
+    </script>
+</body>
+</html>
